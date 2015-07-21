@@ -1,5 +1,5 @@
 shinyUI(pageWithSidebar(
-  headerPanel("Adding Sine Waves"),
+  headerPanel("Constructive and Destructive Interference"),
   sidebarPanel(
     helpText("Set the Red, Green, and Blue component frequencies."),
     sliderInput('c1', 'Red Component Frequency',value = 1, min = 0, max = 10, step = 0.5),
@@ -11,9 +11,9 @@ shinyUI(pageWithSidebar(
     checkboxInput('icomp', 'Show Components', value = FALSE)
     ),
   mainPanel(
-    helpText("The Adding Sine Waves application allows you to",
-             " visualize how sine waves of different frequencies combine.  Set one or more",
-             " component freqencies to zero to turn off that component, or from 1 to 10 to ",
+    helpText("This application allows you to",
+             " visualize how waves of different frequencies combine.  Set one or more",
+             " component frequencies to zero to turn off that component, or from 1 to 10 to ",
              " add that component's frequency to the sum.  Experiment with different values ",
              " to explore constructive and destructive interference."
     ),

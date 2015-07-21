@@ -10,18 +10,18 @@ shinyServer(
       isum <- input$isum
       icomp <- input$icomp
       if (isum == FALSE && icomp == FALSE) {
-        plot(x, xlab='t', ylab='Magnitude', col='black',main='Components', ylim=c(-3, 3),  type='n')
+        plot(x, xlab='time', ylab='Magnitude', col='black',main='', ylim=c(-3, 3),  type='n')
       } else {
         if (isum == TRUE) {
-          plot(sin(c1 * x) + sin(c2 * x) + sin(c3* x), xlab='t', ylab='Magnitude', col='black',main='Components', ylim=c(-3, 3), lwd=3, type='l')
+          plot(sin(c1 * x) + sin(c2 * x) + sin(c3* x), xlab='time', ylab='Magnitude', col='black',main='', ylim=c(-3, 3), lwd=3, type='l')
           par(new=TRUE)
         }
         if (icomp == TRUE) {
-          plot(sin(c1 * x), xlab='t', ylab='Magnitude', col='red',main='Components', ylim=c(-3, 3),  type='l')
+          plot(sin(c1 * x), xlab='time', ylab='Magnitude', col='red',main='', ylim=c(-3, 3),  type='l')
           par(new=TRUE)
-          plot(sin(c2 * x), xlab='t', ylab='', col='green',main='', ylim=c(-3, 3),  type='l')
+          plot(sin(c2 * x), xlab='', ylab='', col='green',main='', ylim=c(-3, 3),  type='l')
           par(new=TRUE)
-          plot(sin(c3* x), xlab='t', ylab='', col='blue',main='', ylim=c(-3, 3),  type='l')
+          plot(sin(c3* x), xlab='', ylab='', col='blue',main='', ylim=c(-3, 3),  type='l')
           par(new=TRUE)
         }
       }
